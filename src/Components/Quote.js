@@ -17,7 +17,7 @@ render(){
         <img src={homer} alt="character" id="image"/>
         </div>
         <div className="characeter-quote">
-        <h2 id="quote">"Five days?  But I’m mad now."</h2>
+        <h2 id="quote">"Five days?  But I’m mad now!"</h2>
         <h5 id="character">- Homer Simpson</h5>
         <button onClick={this.handleClick.bind(this)}>Get Quote</button>
         </div>
