@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Questrial');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding : 0;
+  max-width: 100%;
+}
+
+.App {
+  background-image: url(./images/clouds.jpg);
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+header img {
+  width: 15rem;
+  height: auto;
+}
+
+
+main h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Gloria Hallelujah", cursive;
+  color: #FCF361;
+  text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+}
+
