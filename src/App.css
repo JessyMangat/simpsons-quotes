@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Questrial');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Montserrat');
 
 * {
   box-sizing: border-box;
@@ -38,11 +38,14 @@ main h1 {
  display: flex;
  justify-content: center;
  align-items: center;
+ font-family: Montserrat;
 }
 
+
 button {
+  margin-top: 2rem;
   width: 5rem;
-  height: auto;
+  height: 2rem;
   border-radius: 25px;
   background-color: #FCF361;
 }
