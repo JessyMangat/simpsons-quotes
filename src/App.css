@@ -33,14 +33,6 @@ main h1 {
   text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
 }
 
-.quote-container {
-  padding-top: 2rem;
- display: flex;
- justify-content: center;
- align-items: center;
- font-family: Montserrat;
-}
-
 
 button {
   margin-top: 2rem;
