@@ -2,9 +2,14 @@
 
 
 .quote-container {
-    padding-top: 2rem;
+padding-top: 2rem;
    display: flex;
    justify-content: center;
    align-items: center;
    font-family: Montserrat;
+  }
+
+  .quote-container img {
+      height: 15rem;
+      width: auto;
   }
