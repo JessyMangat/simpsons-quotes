@@ -36,7 +36,7 @@ render() {
       <main>
         <h1>Quote Generator</h1>
         {this.state.quote === null ? (
-          <Quote quote="Five days? But i'm mad now!" image="./images/homer.png" character="- Homer Simpson" />
+          <Quote quote="Five days? But i'm mad now!"  character="- Homer Simpson" />
         ) : (
           <Quote quote={this.state.quote[0].quote} image={this.state.quote[0].image} character={this.state.quote[0].character}/>
         )}

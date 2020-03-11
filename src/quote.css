@@ -3,13 +3,19 @@
 
 .quote-container {
 padding-top: 2rem;
-   display: flex;
+   display: grid;
+   grid-template-columns: 10rem 50%;
    justify-content: center;
    align-items: center;
    font-family: Montserrat;
   }
 
+.quote-container h2 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
   .quote-container img {
-      height: 15rem;
-      width: auto;
+      height: auto;
+      width: 10rem;
   }
