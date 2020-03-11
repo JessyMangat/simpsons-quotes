@@ -40,7 +40,9 @@ render() {
         ) : (
           <Quote quote={this.state.quote[0].quote} image={this.state.quote[0].image} character={this.state.quote[0].character}/>
         )}
+        <div className="button-container">
         <button onClick={this.getQuote.bind(this)}>Get Quote</button>
+        </div>
       </main>
     </div>
   ); }
