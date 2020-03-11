@@ -13,16 +13,12 @@ class App extends React.Component {
     this.getQuote = this.getQuote.bind(this);
   }
   
-  testFunction(){
-    console.log(this.state.quote[0].quote)
-  }
 
   getQuote = async () => {
   
     const api_call =  await fetch (proxy + API);
     const response = await api_call.json();
     this.setState({quote : response})
-    this.testFunction();
     return ;
   }
 

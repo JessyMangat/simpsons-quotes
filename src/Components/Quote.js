@@ -1,5 +1,4 @@
 import React from 'react';
-import homer from '../images/homer.png'
 import '../quote.css';
 
 
@@ -8,11 +7,9 @@ const Quote = props => (
  
         <div className="quote-container">
             <div className="character-image">
-        {props.image === null ? (
-          <img src={homer} alt="character" id="image"/>
-        ) : (
-            <img src={props.image} alt="character" id="image"/>
-        )}
+       
+          <img src={props.image} alt="character" id="image"/>
+
         
         </div>
         <div className="character-quote">
