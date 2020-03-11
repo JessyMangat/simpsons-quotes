@@ -32,7 +32,7 @@ render() {
       <main>
         <h1>Quote Generator</h1>
         {this.state.quote === null ? (
-          <Quote quote="Five days? But i'm mad now!"  character="- Homer Simpson" />
+          <Quote quote="If you don’t like your job, you don’t strike. You just go in every day and do it really half-assed. That’s the American way." image="https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FHomerSimpson.png?1497567511939" character="Homer Simpson" />
         ) : (
           <Quote quote={this.state.quote[0].quote} image={this.state.quote[0].image} character={this.state.quote[0].character}/>
         )}
