@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './images/logo.png';
 import Quote from './Components/Quote.js'
+import Loading from './Components/Loading.js'
 import './App.css';
 const proxy="https://cors-anywhere.herokuapp.com/"
 const API="https://thesimpsonsquoteapi.glitch.me/quotes";
@@ -32,7 +33,7 @@ render() {
       <main>
         <h1>Quote Generator</h1>
         {this.state.quote === null ? (
-          <Quote quote="If you don’t like your job, you don’t strike. You just go in every day and do it really half-assed. That’s the American way." image="https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FHomerSimpson.png?1497567511939" character="Homer Simpson" />
+          <Loading />
         ) : (
           <Quote quote={this.state.quote[0].quote} image={this.state.quote[0].image} character={this.state.quote[0].character}/>
         )}
