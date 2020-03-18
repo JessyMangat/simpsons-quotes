@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
 
 * {
   box-sizing: border-box;
@@ -40,9 +40,10 @@ main h1 {
 }
 
 
-button {
-  width: 5rem;
-  height: 2rem;
-  border-radius: 25px;
-  background-color: #FCF361;
+.button-container h2 {
+  cursor: pointer;
+  font-family: "Gloria Hallelujah", cursive;
+  color: #FCF361;
+  text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+  font-size: 2rem;
 }

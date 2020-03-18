@@ -15,6 +15,11 @@ padding-top: 2rem;
     color: #333;
 }
 
+.quote-container h5 {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
   .quote-container img {
       height: auto;
       width: 10rem;

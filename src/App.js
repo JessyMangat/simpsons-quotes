@@ -3,7 +3,7 @@ import logo from './images/logo.png';
 import Quote from './Components/Quote.js'
 import Loading from './Components/Loading.js'
 import './App.css';
-const proxy="https://cors-anywhere.herokuapp.com/"
+const proxy="https://cors-anywhere.herokuapp.com/";
 const API="https://thesimpsonsquoteapi.glitch.me/quotes";
 
 class App extends React.Component {
@@ -19,9 +19,10 @@ class App extends React.Component {
   
     const api_call =  await fetch (proxy + API);
     const response = await api_call.json();
-    this.setState({quote : response})
+    this.setState({quote : response, })
     return ;
   }
+   
 
 render() {
 
@@ -37,8 +38,8 @@ render() {
         ) : (
           <Quote quote={this.state.quote[0].quote} image={this.state.quote[0].image} character={this.state.quote[0].character}/>
         )}
-        <div className="button-container">
-        <button onClick={this.getQuote.bind(this)}>Get Quote</button>
+          <div className="button-container">
+        <h2 onClick={this.getQuote.bind(this)}>Get Quote</h2>
         </div>
       </main>
     </div>
