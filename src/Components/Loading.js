@@ -4,11 +4,11 @@ import loading from '../images/donut.gif'
 
 
 
-const Quote = props => (  
+const Loading = props => (  
  
         <div className="gif-container">
             <img src={loading} alt="loading" />
         </div>
 );
 
- export default Quote;
+ export default Loading;

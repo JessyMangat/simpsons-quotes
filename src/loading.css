@@ -2,3 +2,18 @@
     display: flex;
     justify-content: center;
 }
+
+.image-container{
+    display: flex;
+    justify-content: center;
+}
+
+.gif-container img{
+    height: 15rem;
+    width: auto;
+}
+
+.image-container img{
+    height: 15rem;
+    width: auto;
+}
