@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './images/logo.png';
 import Quote from './Components/Quote.js'
-import Default from './Components/Default.js'
+import Loading from './Components/Loading.js'
 import './App.css';
 const proxy="https://cors-anywhere.herokuapp.com/";
 const API="https://thesimpsonsquoteapi.glitch.me/quotes";
@@ -13,7 +13,8 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { isQuoteShowing : false,
+    this.state = { hasButtonBeenClicked : false,
+                   isQuoteShowing : false,
                    quote: null,
                    episode: null,
                    episodeInfo: null };
@@ -22,6 +23,17 @@ class App extends React.Component {
     this.getEpisodeInfo = this.getEpisodeInfo.bind(this);
   }
   
+  
+  getQuote = async () => {
+    this.setState({hasButtonBeenClicked: true});
+    this.setState({isQuoteShowing: false});
+    const api_call =  await fetch (API);
+    const response = await api_call.json();
+    this.setState({quote : response, })
+    this.getEpisode();
+  }
+   
+
   getEpisode = async () => {
     const api_call =  await fetch (proxy + episodeAPI + this.state.quote[0].quote);
     const response = await api_call.json();
@@ -37,14 +49,6 @@ class App extends React.Component {
     return;
   }
 
-  getQuote = async () => {
-    const api_call =  await fetch (API);
-    const response = await api_call.json();
-    this.setState({quote : response, })
-    this.getEpisode();
-  }
-   
-
 render() {
 
   return (
@@ -55,7 +59,7 @@ render() {
       <main>
         <h1>Quote Generator</h1>
         {this.state.isQuoteShowing === false ? (
-          <Default />
+          <Loading />
         ) : (
           <Quote quote={this.state.quote[0].quote} image={this.state.quote[0].image} character={this.state.quote[0].character} episodeNumber={this.state.episodeInfo.Episode.Key} episodeTitle={this.state.episodeInfo.Episode.Title} />
         )}

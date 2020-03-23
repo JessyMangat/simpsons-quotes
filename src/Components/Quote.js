@@ -1,5 +1,4 @@
 import React from 'react';
-import Loading from '../Components/Loading'
 import '../quote.css';
 
 
@@ -16,9 +15,9 @@ const Quote = props => (
         
         </div>
         <div className="character-quote">
+        <h5 id="episode-info">{props.episodeNumber}: {props.episodeTitle}</h5>
         <h2 id="quote">"{props.quote}"</h2>
         <h5 id="character">- {props.character}</h5>
-        <h5 id="episode-info">{props.episodeNumber} | {props.episodeTitle}</h5>
         </div>
        
         </div>

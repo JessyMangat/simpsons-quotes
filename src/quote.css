@@ -11,7 +11,8 @@ padding-top: 2rem;
   }
 
 .quote-container h2 {
-    font-size: 1.2rem;
+  margin-top: 1rem;  
+  font-size: 1.2rem;
     color: #333;
 }
 

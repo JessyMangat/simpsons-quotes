@@ -11,6 +11,7 @@
   background-image: url(./images/clouds.jpg);
   height: 100vh;
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 header {
