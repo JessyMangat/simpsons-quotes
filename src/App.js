@@ -7,6 +7,7 @@ const proxy="https://cors-anywhere.herokuapp.com/";
 const API="https://thesimpsonsquoteapi.glitch.me/quotes";
 const episodeAPI="https://frinkiac.com/api/search?q=";
 const episodeInfoAPI = "https://frinkiac.com/api/caption?e="
+const screenshotURL = "https://frinkiac.com/meme/"
 
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
     this.getQuote = this.getQuote.bind(this);
     this.getEpisode = this.getEpisode.bind(this);
     this.getEpisodeInfo = this.getEpisodeInfo.bind(this);
+    this.viewScreenshot = this.viewScreenshot.bind(this);
   }
   
   
@@ -49,6 +51,11 @@ class App extends React.Component {
     return;
   }
 
+  viewScreenshot = async () => {
+    window.open(screenshotURL + this.state.episode[0].Episode + "/" + this.state.episode[0].Timestamp);
+    return;
+  }
+
 render() {
 
   return (
@@ -61,7 +68,12 @@ render() {
         {this.state.isQuoteShowing === false ? (
           <Loading hasButtonBeenClicked={this.state.hasButtonBeenClicked} />
         ) : (
+          <div>
           <Quote quote={this.state.quote[0].quote} image={this.state.quote[0].image} character={this.state.quote[0].character} episodeNumber={this.state.episodeInfo.Episode.Key} episodeTitle={this.state.episodeInfo.Episode.Title} />
+          <div className="button-container">
+        <button onClick={this.viewScreenshot.bind(this)}>View Screenshot</button>
+         </div>
+         </div>
         )}
           <div className="button-container">
         <button onClick={this.getQuote.bind(this)}>Get Quote</button>
