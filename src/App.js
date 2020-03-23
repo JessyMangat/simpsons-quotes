@@ -59,7 +59,7 @@ render() {
       <main>
         <h1>Quote Generator</h1>
         {this.state.isQuoteShowing === false ? (
-          <Loading />
+          <Loading hasButtonBeenClicked={this.state.hasButtonBeenClicked} />
         ) : (
           <Quote quote={this.state.quote[0].quote} image={this.state.quote[0].image} character={this.state.quote[0].character} episodeNumber={this.state.episodeInfo.Episode.Key} episodeTitle={this.state.episodeInfo.Episode.Title} />
         )}
